@@ -38,6 +38,7 @@ func getCreateDescription() action_kit_api.ActionDescription {
 				Description: extutil.Ptr(fmt.Sprintf("What label should the newly created %s carry?", config.Config.TargetTypeLabel)),
 				Type:        action_kit_api.String,
 				Order:       extutil.Ptr(1),
+				Required:    extutil.Ptr(true),
 			},
 		},
 		Prepare: action_kit_api.MutatingEndpointReference{

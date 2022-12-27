@@ -45,6 +45,7 @@ func getUpdateDescription() action_kit_api.ActionDescription {
 				Description: extutil.Ptr(fmt.Sprintf("What should the new label of this %s be?", config.Config.TargetTypeLabel)),
 				Type:        action_kit_api.String,
 				Order:       extutil.Ptr(1),
+				Required:    extutil.Ptr(true),
 			},
 		},
 		Prepare: action_kit_api.MutatingEndpointReference{
