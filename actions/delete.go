@@ -96,5 +96,12 @@ func startDelete(w http.ResponseWriter, _ *http.Request, body []byte) {
 		return
 	}
 
-	exthttp.WriteBody(w, action_kit_api.StartResult{})
+	exthttp.WriteBody(w, action_kit_api.StartResult{
+		Messages: extutil.Ptr([]action_kit_api.Message{
+			{
+				Level:   extutil.Ptr(action_kit_api.Info),
+				Message: fmt.Sprintf("Deleted '%s' labeled '%s' from instance '%s'", config.Config.TargetTypeLabel, state.Label, config.Config.InstanceName),
+			},
+		}),
+	})
 }

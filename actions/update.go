@@ -106,5 +106,12 @@ func startUpdate(w http.ResponseWriter, _ *http.Request, body []byte) {
 		return
 	}
 
-	exthttp.WriteBody(w, action_kit_api.StartResult{})
+	exthttp.WriteBody(w, action_kit_api.StartResult{
+		Messages: extutil.Ptr([]action_kit_api.Message{
+			{
+				Level:   extutil.Ptr(action_kit_api.Info),
+				Message: fmt.Sprintf("Updated '%s' labeled '%s' (previously '%s') in instance '%s'", config.Config.TargetTypeLabel, state.NewLabel, state.OldLabel, config.Config.InstanceName),
+			},
+		}),
+	})
 }
