@@ -5,6 +5,7 @@ package db
 
 import (
 	"fmt"
+	"github.com/google/uuid"
 	"github.com/steadybit/discovery-kit/go/discovery_kit_api"
 	"github.com/steadybit/extension-crud/config"
 	"golang.org/x/exp/slices"
@@ -26,7 +27,7 @@ func Create(label string) error {
 		}
 	}
 
-	targets = append(targets, createTarget(label))
+	targets = append(targets, createTarget(uuid.New().String(), label))
 	return nil
 }
 
@@ -40,7 +41,7 @@ func Update(oldLabel string, newLabel string) error {
 
 	for i, target := range targets {
 		if target.Label == oldLabel {
-			targets[i] = createTarget(newLabel)
+			targets[i] = createTarget(target.Id, newLabel)
 			return nil
 		}
 	}
@@ -62,7 +63,7 @@ func Delete(label string) error {
 	return fmt.Errorf("a %s with label '%s' could not be found", config.Config.TargetTypeLabel, label)
 }
 
-func createTarget(label string) discovery_kit_api.Target {
+func createTarget(id string, label string) discovery_kit_api.Target {
 	return discovery_kit_api.Target{
 		Id:         label,
 		Label:      label,
