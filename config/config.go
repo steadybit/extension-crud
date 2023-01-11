@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// SPDX-FileCopyrightText: 2022 Steadybit GmbH
+// SPDX-FileCopyrightText: 2023 Steadybit GmbH
 
 package config
 
@@ -13,7 +13,6 @@ var (
 )
 
 type Specification struct {
-	Port            uint16 `default:"8091"`
 	InstanceName    string `default:"Animal Shelter" split_words:"true"`
 	TargetType      string `default:"dog" split_words:"true"`
 	TargetTypeLabel string `default:"Dog" split_words:"true"`

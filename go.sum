@@ -11,6 +11,7 @@ github.com/mattn/go-isatty v0.0.14 h1:yVuAays6BHfxijgZPzw+3Zlu5yQgKGP2/hcQbHb7S9
 github.com/mattn/go-isatty v0.0.14/go.mod h1:7GGIvUiUoEMVVmxf/4nioHXj79iQHKdU27kJ6hsGG94=
 github.com/mitchellh/mapstructure v1.5.0 h1:jeMsZIYE/09sWLaz43PL7Gy6RuMjD2eJVyuac5Z2hdY=
 github.com/mitchellh/mapstructure v1.5.0/go.mod h1:bFUtVrKA4DC2yAKiSyO/QUcy7e+RRV2QTWOzhPopBRo=
+github.com/phayes/freeport v0.0.0-20220201140144-74d24b5ae9f5 h1:Ii+DKncOVM8Cu1Hc+ETb5K+23HdAMvESYE3ZJ5b5cMI=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/rs/xid v1.3.0/go.mod h1:trrq9SKmegXys3aeAKXMUTdJsYXVwGY3RLcfgqegfbg=
@@ -22,8 +23,8 @@ github.com/steadybit/attack-kit/go/attack_kit_api v0.1.0 h1:FpY7E+k5xcUYyKSKUCDO
 github.com/steadybit/attack-kit/go/attack_kit_api v0.1.0/go.mod h1:mt4cEAhluP5pRjXXDq7dJ78fZfhmgRyIrKa8fX3O3es=
 github.com/steadybit/discovery-kit/go/discovery_kit_api v1.1.0 h1:Ue2pIpPmtcVTcwILZlRfAsKNbznUjrRfmeZXlta4YOw=
 github.com/steadybit/discovery-kit/go/discovery_kit_api v1.1.0/go.mod h1:OnIfjrBhmMQCYxriHmr8mT1wCpvqIZxwBHWnanFhgNA=
-github.com/steadybit/extension-kit v1.5.0 h1:4PXUxa66PhdL4L6QexWqbYbIHfBeKq7ZKI9mKq19tBs=
-github.com/steadybit/extension-kit v1.5.0/go.mod h1:RpEERODMoEqNL5GXdMRhnRJwu1vUlHBS+2cZ9WWKQKg=
+github.com/steadybit/extension-kit v1.6.0 h1:TV5EQQqT9yBtzTKoHg4s56B+n2x1UAWok0t2puoo26o=
+github.com/steadybit/extension-kit v1.6.0/go.mod h1:zC5Tw+wrJTx4xvOlsIY+MfMoRYoglj83vR15Xr3aP5c=
 github.com/steadybit/extension-kong v1.5.0 h1:gA3ywGrTq13IHpIBj6u17CVIQSeL5jnisv02LiH2T7k=
 github.com/steadybit/extension-kong v1.5.0/go.mod h1:e5CDnKJPpS++CDhSInpLLTeOm5s+ZKjP41bdiyIgrMQ=
 github.com/stretchr/testify v1.8.0 h1:pSgiaMZlXftHpm5L7V1+rVB+AZJydKsMxsQBIJw4PKk=

@@ -1,19 +1,16 @@
 // SPDX-License-Identifier: MIT
-// SPDX-FileCopyrightText: 2022 Steadybit GmbH
+// SPDX-FileCopyrightText: 2023 Steadybit GmbH
 
 package main
 
 import (
-	"fmt"
-	"github.com/rs/zerolog/log"
 	"github.com/steadybit/action-kit/go/action_kit_api/v2"
 	"github.com/steadybit/discovery-kit/go/discovery_kit_api"
 	"github.com/steadybit/extension-crud/actions"
-	"github.com/steadybit/extension-crud/config"
 	"github.com/steadybit/extension-crud/discovery"
+	"github.com/steadybit/extension-kit/exthttp"
 	"github.com/steadybit/extension-kit/extlogging"
 	"github.com/steadybit/extension-kong/utils"
-	"net/http"
 )
 
 func main() {
@@ -25,12 +22,9 @@ func main() {
 	actions.RegisterUpdateAction()
 	actions.RegisterDeleteAction()
 
-	port := config.Config.Port
-	log.Info().Msgf("Starting extension-crud server on port %d. Get started via /", port)
-	err := http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
-	if err != nil {
-		log.Fatal().Err(err).Msgf("Failed to start extension-crud server on port %d", port)
-	}
+	exthttp.Listen(exthttp.ListenOpts{
+		Port: 8091,
+	})
 }
 
 type ExtensionListResponse struct {
