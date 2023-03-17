@@ -26,7 +26,7 @@ func RegisterUpdateAction() {
 func getUpdateDescription() action_kit_api.ActionDescription {
 	return action_kit_api.ActionDescription{
 		Id:          fmt.Sprintf("%s.update", config.Config.TargetType),
-		Label:       fmt.Sprintf("update %s", config.Config.TargetTypeLabel),
+		Label:       fmt.Sprintf("Update %s", config.Config.TargetTypeLabel),
 		Description: fmt.Sprintf("Renames a %s entity within the CRUD extension's in-memory data store.", config.Config.TargetTypeLabel),
 		Version:     extbuild.GetSemverVersionStringOrUnknown(),
 		Category:    extutil.Ptr("CRUD"),

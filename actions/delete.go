@@ -26,7 +26,7 @@ func RegisterDeleteAction() {
 func getDeleteDescription() action_kit_api.ActionDescription {
 	return action_kit_api.ActionDescription{
 		Id:          fmt.Sprintf("%s.delete", config.Config.TargetType),
-		Label:       fmt.Sprintf("delete %s", config.Config.TargetTypeLabel),
+		Label:       fmt.Sprintf("Delete %s", config.Config.TargetTypeLabel),
 		Description: fmt.Sprintf("Removes a %s entity from the CRUD extension's in-memory data store.", config.Config.TargetTypeLabel),
 		Version:     extbuild.GetSemverVersionStringOrUnknown(),
 		Category:    extutil.Ptr("CRUD"),

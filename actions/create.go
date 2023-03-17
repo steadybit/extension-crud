@@ -26,7 +26,7 @@ func RegisterCreateAction() {
 func getCreateDescription() action_kit_api.ActionDescription {
 	return action_kit_api.ActionDescription{
 		Id:          fmt.Sprintf("%s.create", config.Config.TargetType),
-		Label:       fmt.Sprintf("create %s", config.Config.TargetTypeLabel),
+		Label:       fmt.Sprintf("Create %s", config.Config.TargetTypeLabel),
 		Description: fmt.Sprintf("Stores a new %s entity within the CRUD extension's in-memory data store.", config.Config.TargetTypeLabel),
 		Version:     extbuild.GetSemverVersionStringOrUnknown(),
 		Category:    extutil.Ptr("CRUD"),
