@@ -7,6 +7,7 @@ import (
 	"github.com/steadybit/discovery-kit/go/discovery_kit_api"
 	"github.com/steadybit/extension-crud/config"
 	"github.com/steadybit/extension-crud/db"
+	"github.com/steadybit/extension-kit/extbuild"
 	"github.com/steadybit/extension-kong/utils"
 	"net/http"
 )
@@ -35,7 +36,7 @@ func getTargetDescription() discovery_kit_api.TargetDescription {
 		Id:       config.Config.TargetType,
 		Label:    discovery_kit_api.PluralLabel{One: config.Config.TargetTypeLabel, Other: config.Config.TargetTypeLabel},
 		Category: discovery_kit_api.Ptr("CRUD"),
-		Version:  "1.0.0",
+		Version:  extbuild.GetSemverVersionStringOrUnknown(),
 		Table: discovery_kit_api.Table{
 			Columns: []discovery_kit_api.Column{
 				{Attribute: "steadybit.label"},

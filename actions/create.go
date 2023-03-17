@@ -10,6 +10,7 @@ import (
 	"github.com/steadybit/extension-crud/config"
 	"github.com/steadybit/extension-crud/db"
 	extension_kit "github.com/steadybit/extension-kit"
+	"github.com/steadybit/extension-kit/extbuild"
 	"github.com/steadybit/extension-kit/extconversion"
 	"github.com/steadybit/extension-kit/exthttp"
 	"github.com/steadybit/extension-kit/extutil"
@@ -27,7 +28,7 @@ func getCreateDescription() action_kit_api.ActionDescription {
 		Id:          fmt.Sprintf("%s.create", config.Config.TargetType),
 		Label:       fmt.Sprintf("create %s", config.Config.TargetTypeLabel),
 		Description: fmt.Sprintf("Stores a new %s entity within the CRUD extension's in-memory data store.", config.Config.TargetTypeLabel),
-		Version:     "1.0.0-SNAPSHOT",
+		Version:     extbuild.GetSemverVersionStringOrUnknown(),
 		Category:    extutil.Ptr("CRUD"),
 		Kind:        action_kit_api.Other,
 		TimeControl: action_kit_api.Instantaneous,

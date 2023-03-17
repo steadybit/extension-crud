@@ -10,6 +10,7 @@ import (
 	"github.com/steadybit/extension-crud/config"
 	"github.com/steadybit/extension-crud/db"
 	extension_kit "github.com/steadybit/extension-kit"
+	"github.com/steadybit/extension-kit/extbuild"
 	"github.com/steadybit/extension-kit/extconversion"
 	"github.com/steadybit/extension-kit/exthttp"
 	"github.com/steadybit/extension-kit/extutil"
@@ -27,7 +28,7 @@ func getDeleteDescription() action_kit_api.ActionDescription {
 		Id:          fmt.Sprintf("%s.delete", config.Config.TargetType),
 		Label:       fmt.Sprintf("delete %s", config.Config.TargetTypeLabel),
 		Description: fmt.Sprintf("Removes a %s entity from the CRUD extension's in-memory data store.", config.Config.TargetTypeLabel),
-		Version:     "1.0.0-SNAPSHOT",
+		Version:     extbuild.GetSemverVersionStringOrUnknown(),
 		Category:    extutil.Ptr("CRUD"),
 		Kind:        action_kit_api.Other,
 		TimeControl: action_kit_api.Instantaneous,
