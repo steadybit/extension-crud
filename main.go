@@ -8,6 +8,7 @@ import (
 	"github.com/steadybit/discovery-kit/go/discovery_kit_api"
 	"github.com/steadybit/extension-crud/actions"
 	"github.com/steadybit/extension-crud/discovery"
+	"github.com/steadybit/extension-kit/extbuild"
 	"github.com/steadybit/extension-kit/exthttp"
 	"github.com/steadybit/extension-kit/extlogging"
 	"github.com/steadybit/extension-kong/utils"
@@ -15,6 +16,7 @@ import (
 
 func main() {
 	extlogging.InitZeroLog()
+	extbuild.PrintBuildInformation()
 
 	utils.RegisterHttpHandler("/", utils.GetterAsHandler(getExtensionList))
 	discovery.RegisterDiscoveryHandlers()

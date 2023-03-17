@@ -23,10 +23,10 @@ github.com/steadybit/attack-kit/go/attack_kit_api v0.1.0 h1:FpY7E+k5xcUYyKSKUCDO
 github.com/steadybit/attack-kit/go/attack_kit_api v0.1.0/go.mod h1:mt4cEAhluP5pRjXXDq7dJ78fZfhmgRyIrKa8fX3O3es=
 github.com/steadybit/discovery-kit/go/discovery_kit_api v1.1.0 h1:Ue2pIpPmtcVTcwILZlRfAsKNbznUjrRfmeZXlta4YOw=
 github.com/steadybit/discovery-kit/go/discovery_kit_api v1.1.0/go.mod h1:OnIfjrBhmMQCYxriHmr8mT1wCpvqIZxwBHWnanFhgNA=
-github.com/steadybit/extension-kit v1.6.0 h1:TV5EQQqT9yBtzTKoHg4s56B+n2x1UAWok0t2puoo26o=
-github.com/steadybit/extension-kit v1.6.0/go.mod h1:zC5Tw+wrJTx4xvOlsIY+MfMoRYoglj83vR15Xr3aP5c=
-github.com/steadybit/extension-kong v1.5.0 h1:gA3ywGrTq13IHpIBj6u17CVIQSeL5jnisv02LiH2T7k=
-github.com/steadybit/extension-kong v1.5.0/go.mod h1:e5CDnKJPpS++CDhSInpLLTeOm5s+ZKjP41bdiyIgrMQ=
+github.com/steadybit/extension-kit v1.7.1 h1:znUl8db9tv2g38C6H02CBnxvku0fVBiLXxXhrPXhAHg=
+github.com/steadybit/extension-kit v1.7.1/go.mod h1:zC5Tw+wrJTx4xvOlsIY+MfMoRYoglj83vR15Xr3aP5c=
+github.com/steadybit/extension-kong v1.6.1 h1:/BCnOeZZ8Vd2vRt2Q8dSifx+sTVnD28Mh8xXieAMew4=
+github.com/steadybit/extension-kong v1.6.1/go.mod h1:0rTrCL/K1ZLpJfk+poKbXOMkVEOx7UaIdOg60yz4U14=
 github.com/stretchr/testify v1.8.0 h1:pSgiaMZlXftHpm5L7V1+rVB+AZJydKsMxsQBIJw4PKk=
 golang.org/x/exp v0.0.0-20221217163422-3c43f8badb15 h1:5oN1Pz/eDhCpbMbLstvIPa0b/BEQo6g6nwV3pLjfM6w=
 golang.org/x/exp v0.0.0-20221217163422-3c43f8badb15/go.mod h1:CxIveKay+FTh1D0yPZemJVgC/95VzuuOLq5Qi4xnoYc=
