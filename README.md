@@ -1,3 +1,10 @@
+
+# :warning: This repo is archived. :warning:
+### Please have a look at our [extension-scaffold](https://github.com/steadybit/extension-scaffold). 
+
+
+
+
 # Steadybit extension-crud
 
 A [Steadybit](https://www.steadybit.com/) discovery and action implementation acting as a CRUD backend. Useful to experiment freely with discovery and action terminology.
