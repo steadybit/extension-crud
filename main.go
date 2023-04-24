@@ -11,14 +11,13 @@ import (
 	"github.com/steadybit/extension-kit/extbuild"
 	"github.com/steadybit/extension-kit/exthttp"
 	"github.com/steadybit/extension-kit/extlogging"
-	"github.com/steadybit/extension-kong/utils"
 )
 
 func main() {
 	extlogging.InitZeroLog()
 	extbuild.PrintBuildInformation()
 
-	utils.RegisterHttpHandler("/", utils.GetterAsHandler(getExtensionList))
+	exthttp.RegisterHttpHandler("/", exthttp.GetterAsHandler(getExtensionList))
 	discovery.RegisterDiscoveryHandlers()
 	actions.RegisterCreateAction()
 	actions.RegisterUpdateAction()
@@ -40,34 +39,34 @@ func getExtensionList() ExtensionListResponse {
 	return ExtensionListResponse{
 		Actions: []action_kit_api.DescribingEndpointReference{
 			{
-				"GET",
-				"/actions/create",
+				Method: "GET",
+				Path:   "/actions/create",
 			},
 			{
-				"GET",
-				"/actions/update",
+				Method: "GET",
+				Path:   "/actions/update",
 			},
 			{
-				"GET",
-				"/actions/delete",
+				Method: "GET",
+				Path:   "/actions/delete",
 			},
 		},
 		Discoveries: []discovery_kit_api.DescribingEndpointReference{
 			{
-				"GET",
-				"/discovery-description",
+				Method: "GET",
+				Path:   "/discovery-description",
 			},
 		},
 		TargetTypes: []discovery_kit_api.DescribingEndpointReference{
 			{
-				"GET",
-				"/target-description",
+				Method: "GET",
+				Path:   "/target-description",
 			},
 		},
 		TargetAttributes: []discovery_kit_api.DescribingEndpointReference{
 			{
-				"GET",
-				"/attribute-descriptions",
+				Method: "GET",
+				Path:   "/attribute-descriptions",
 			},
 		},
 	}

@@ -3,7 +3,7 @@
 ##
 ## Build
 ##
-FROM golang:1.18-alpine AS build
+FROM golang:1.20-alpine AS build
 
 ARG NAME
 ARG VERSION
@@ -22,7 +22,7 @@ RUN go build \
     -X 'github.com/steadybit/extension-kit/extbuild.ExtensionName=${NAME}' \
     -X 'github.com/steadybit/extension-kit/extbuild.Version=${VERSION}' \
     -X 'github.com/steadybit/extension-kit/extbuild.Revision=${REVISION}'" \
-    -o /extension-crud
+    -o ./extension
 
 ##
 ## Runtime
@@ -38,8 +38,8 @@ USER $USERNAME
 
 WORKDIR /
 
-COPY --from=build /extension-crud /extension-crud
+COPY --from=build /app/extension /extension
 
 EXPOSE 8080
 
-ENTRYPOINT ["/extension-crud"]
+ENTRYPOINT ["/extension"]

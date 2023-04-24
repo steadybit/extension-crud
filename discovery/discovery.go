@@ -8,15 +8,15 @@ import (
 	"github.com/steadybit/extension-crud/config"
 	"github.com/steadybit/extension-crud/db"
 	"github.com/steadybit/extension-kit/extbuild"
-	"github.com/steadybit/extension-kong/utils"
+	"github.com/steadybit/extension-kit/exthttp"
 	"net/http"
 )
 
 func RegisterDiscoveryHandlers() {
-	utils.RegisterHttpHandler("/discovery-description", utils.GetterAsHandler(getDiscoveryDescription))
-	utils.RegisterHttpHandler("/target-description", utils.GetterAsHandler(getTargetDescription))
-	utils.RegisterHttpHandler("/attribute-descriptions", utils.GetterAsHandler(getAttributeDescriptions))
-	utils.RegisterHttpHandler("/discover", discover)
+	exthttp.RegisterHttpHandler("/discovery-description", exthttp.GetterAsHandler(getDiscoveryDescription))
+	exthttp.RegisterHttpHandler("/target-description", exthttp.GetterAsHandler(getTargetDescription))
+	exthttp.RegisterHttpHandler("/attribute-descriptions", exthttp.GetterAsHandler(getAttributeDescriptions))
+	exthttp.RegisterHttpHandler("/discover", discover)
 }
 
 func getDiscoveryDescription() discovery_kit_api.DiscoveryDescription {
@@ -67,5 +67,5 @@ func getAttributeDescriptions() discovery_kit_api.AttributeDescriptions {
 }
 
 func discover(w http.ResponseWriter, _ *http.Request, _ []byte) {
-	utils.WriteBody(w, discovery_kit_api.DiscoveredTargets{Targets: db.Read()})
+	exthttp.WriteBody(w, discovery_kit_api.DiscoveredTargets{Targets: db.Read()})
 }
