@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 image:
   # image.name -- The container image to use for the steadybit CRUD extension.
-  name: steadybit/extension-crud
+  name: ghcr.io/steadybit/extension-crud
   # image.tag -- tag name of the extension-crud container image to use.
   # See https://hub.docker.com/r/steadybit/extension-crud for all tags.
   tag: latest
