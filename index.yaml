@@ -12,6 +12,35 @@ entries:
           url: https://hub.steadybit.com
     apiVersion: v2
     appVersion: latest
+    created: "2023-04-26T13:09:15.110725507Z"
+    dependencies:
+    - name: extensionlib
+      repository: https://steadybit.github.io/helm-charts
+      version: 1.2.0
+    description: Steadybit CRUD extension Helm chart for Kubernetes.
+    digest: 47cb0ba0a7c44d1842d6e0ba466e71bd80d9a71f606c7bc65193250d7378394f
+    home: https://www.steadybit.com/
+    icon: https://steadybit-website-assets.s3.amazonaws.com/logo-symbol-transparent.png
+    maintainers:
+    - email: daniel.reuter@steadybit.com
+      name: reuda
+    name: steadybit-extension-crud
+    sources:
+    - https://github.com/steadybit/extension-crud
+    urls:
+    - https://github.com/steadybit/extension-crud/releases/download/steadybit-extension-crud-2.0.3/steadybit-extension-crud-2.0.3.tgz
+    version: 2.0.3
+  - annotations:
+      artifacthub.io/images: |
+        - name: logo
+          image: https://steadybit-website-assets.s3.amazonaws.com/logo-symbol-transparent.png
+      artifacthub.io/links: |-
+        - name: Steadybit website
+          url: https://www.steadybit.com
+        - name: Steadybit reliability hub
+          url: https://hub.steadybit.com
+    apiVersion: v2
+    appVersion: latest
     created: "2023-04-25T15:19:45.699946169Z"
     dependencies:
     - name: extensionlib
@@ -30,4 +59,4 @@ entries:
     urls:
     - https://github.com/steadybit/extension-crud/releases/download/steadybit-extension-crud-2.0.2/steadybit-extension-crud-2.0.2.tgz
     version: 2.0.2
-generated: "2023-04-25T15:19:45.699952469Z"
+generated: "2023-04-26T13:09:15.110731607Z"
