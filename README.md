@@ -18,7 +18,7 @@ This extension is configurable via environment variables:
 
 ## Deployment
 
-We recommend that you deploy the extension with our [official Helm chart](https://github.com/steadybit/helm-charts/tree/main/charts/steadybit-extension-crud).
+We recommend that you deploy the extension with our [official Helm chart](https://github.com/steadybit/extension-crud/tree/main/charts/steadybit-extension-crud).
 
 ## Agent Configuration
 
