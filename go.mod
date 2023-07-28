@@ -11,8 +11,8 @@ require (
 	github.com/rs/zerolog v1.29.1
 	github.com/steadybit/action-kit/go/action_kit_api/v2 v2.6.3
 	github.com/steadybit/discovery-kit/go/discovery_kit_api v1.3.0
-	github.com/steadybit/extension-kit v1.8.2
-	golang.org/x/exp v0.0.0-20230711153332-06a737ee72cb
+	github.com/steadybit/extension-kit v1.8.3
+	golang.org/x/exp v0.0.0-20230725093048-515e97ebf090
 )
 
 require (
