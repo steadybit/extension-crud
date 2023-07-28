@@ -53,7 +53,51 @@ manifest should match snapshot with TLS:
               secret:
                 optional: false
                 secretName: server-cert
-manifest should match snapshot with mutual TLS:
+manifest should match snapshot with extra env vars:
+  1: |
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      labels: null
+      name: RELEASE-NAME-steadybit-extension-crud
+      namespace: NAMESPACE
+    spec:
+      replicas: 1
+      selector:
+        matchLabels:
+          app.kubernetes.io/name: RELEASE-NAME-steadybit-extension-crud
+      template:
+        metadata:
+          labels:
+            app.kubernetes.io/name: RELEASE-NAME-steadybit-extension-crud
+        spec:
+          containers:
+            - env:
+                - name: STEADYBIT_EXTENSION_PORT
+                  value: "8080"
+                - name: STEADYBIT_LOG_LEVEL
+                  value: INFO
+                - name: STEADYBIT_LOG_FORMAT
+                  value: text
+                - name: STEADYBIT_EXTENSION_INSTANCE_NAME
+                  value: Dog Shelter
+                - name: STEADYBIT_EXTENSION_TARGET_TYPE
+                  value: dog
+                - name: STEADYBIT_EXTENSION_TARGET_TYPE_LABEL
+                  value: Dog
+              image: ghcr.io/steadybit/extension-crud:latest
+              imagePullPolicy: Always
+              name: extension-crud
+              resources:
+                limits:
+                  cpu: 200m
+                  memory: 128Mi
+                requests:
+                  cpu: 50m
+                  memory: 64Mi
+              volumeMounts: null
+          volumes: null
+manifest should match snapshot with mutual TLS using containerPaths:
   1: |
     apiVersion: apps/v1
     kind: Deployment
@@ -80,11 +124,11 @@ manifest should match snapshot with mutual TLS:
                 - name: STEADYBIT_LOG_FORMAT
                   value: text
                 - name: STEADYBIT_EXTENSION_TLS_SERVER_CERT
-                  value: /etc/extension/certificates/server-cert/tls.crt
+                  value: /etc/tls/server.crt
                 - name: STEADYBIT_EXTENSION_TLS_SERVER_KEY
-                  value: /etc/extension/certificates/server-cert/tls.key
+                  value: /etc/tls/server.key
                 - name: STEADYBIT_EXTENSION_TLS_CLIENT_CAS
-                  value: /etc/extension/certificates/client-cert-a/tls.crt,/etc/extension/certificates/client-cert-a/tls.crt
+                  value: /etc/tls/ca.crt,/etc/tls/ca2.crt
                 - name: STEADYBIT_EXTENSION_INSTANCE_NAME
                   value: Dog Shelter
                 - name: STEADYBIT_EXTENSION_TARGET_TYPE
@@ -101,22 +145,8 @@ manifest should match snapshot with mutual TLS:
                 requests:
                   cpu: 50m
                   memory: 64Mi
-              volumeMounts:
-                - mountPath: /etc/extension/certificates/client-cert-a
-                  name: certificate-client-cert-a
-                  readOnly: true
-                - mountPath: /etc/extension/certificates/server-cert
-                  name: certificate-server-cert
-                  readOnly: true
-          volumes:
-            - name: certificate-client-cert-a
-              secret:
-                optional: false
-                secretName: client-cert-a
-            - name: certificate-server-cert
-              secret:
-                optional: false
-                secretName: server-cert
+              volumeMounts: null
+          volumes: null
 manifest should match snapshot without TLS:
   1: |
     apiVersion: apps/v1
