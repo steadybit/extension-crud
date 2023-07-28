@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.2.1
+
+- update dependencies
+
 ## v1.2.0
 
  - Print build information on extension startup.
