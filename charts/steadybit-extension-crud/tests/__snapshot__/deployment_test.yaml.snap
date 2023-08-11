@@ -44,7 +44,7 @@ manifest should match snapshot using podAnnotations and Labels:
                   memory: 128Mi
                 requests:
                   cpu: 50m
-                  memory: 64Mi
+                  memory: 32Mi
               volumeMounts: null
           volumes: null
 manifest should match snapshot with TLS:
@@ -95,7 +95,7 @@ manifest should match snapshot with TLS:
                   memory: 128Mi
                 requests:
                   cpu: 50m
-                  memory: 64Mi
+                  memory: 32Mi
               volumeMounts:
                 - mountPath: /etc/extension/certificates/server-cert
                   name: certificate-server-cert
@@ -149,7 +149,7 @@ manifest should match snapshot with extra env vars:
                   memory: 128Mi
                 requests:
                   cpu: 50m
-                  memory: 64Mi
+                  memory: 32Mi
               volumeMounts: null
           volumes: null
 manifest should match snapshot with mutual TLS:
@@ -202,7 +202,7 @@ manifest should match snapshot with mutual TLS:
                   memory: 128Mi
                 requests:
                   cpu: 50m
-                  memory: 64Mi
+                  memory: 32Mi
               volumeMounts:
                 - mountPath: /etc/extension/certificates/client-cert-a
                   name: certificate-client-cert-a
@@ -269,7 +269,7 @@ manifest should match snapshot with mutual TLS using containerPaths:
                   memory: 128Mi
                 requests:
                   cpu: 50m
-                  memory: 64Mi
+                  memory: 32Mi
               volumeMounts: null
           volumes: null
 manifest should match snapshot without TLS:
@@ -316,6 +316,6 @@ manifest should match snapshot without TLS:
                   memory: 128Mi
                 requests:
                   cpu: 50m
-                  memory: 64Mi
+                  memory: 32Mi
               volumeMounts: null
           volumes: null
