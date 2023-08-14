@@ -31,7 +31,7 @@ func getDeleteDescription() action_kit_api.ActionDescription {
 		Version:     extbuild.GetSemverVersionStringOrUnknown(),
 		Category:    extutil.Ptr("CRUD"),
 		Kind:        action_kit_api.Other,
-		TimeControl: action_kit_api.Instantaneous,
+		TimeControl: action_kit_api.TimeControlInstantaneous,
 		Parameters:  []action_kit_api.ActionParameter{},
 		TargetType:  extutil.Ptr(config.Config.TargetType),
 		TargetSelectionTemplates: extutil.Ptr([]action_kit_api.TargetSelectionTemplate{
