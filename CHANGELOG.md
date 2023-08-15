@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.2.4
+
+- update dependencies
+
 ## v1.2.2
 
 - migration to new unified steadybit actionIds and targetTypes
