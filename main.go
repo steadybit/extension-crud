@@ -4,6 +4,7 @@
 package main
 
 import (
+	"github.com/rs/zerolog"
 	"github.com/steadybit/action-kit/go/action_kit_api/v2"
 	"github.com/steadybit/discovery-kit/go/discovery_kit_api"
 	"github.com/steadybit/extension-crud/actions"
@@ -11,11 +12,13 @@ import (
 	"github.com/steadybit/extension-kit/extbuild"
 	"github.com/steadybit/extension-kit/exthttp"
 	"github.com/steadybit/extension-kit/extlogging"
+	"github.com/steadybit/extension-kit/extruntime"
 )
 
 func main() {
 	extlogging.InitZeroLog()
 	extbuild.PrintBuildInformation()
+	extruntime.LogRuntimeInformation(zerolog.DebugLevel)
 
 	exthttp.RegisterHttpHandler("/", exthttp.GetterAsHandler(getExtensionList))
 	discovery.RegisterDiscoveryHandlers()
