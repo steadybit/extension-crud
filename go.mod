@@ -8,7 +8,7 @@ go 1.20
 require (
 	github.com/google/uuid v1.3.1
 	github.com/kelseyhightower/envconfig v1.4.0
-	github.com/rs/zerolog v1.30.0
+	github.com/rs/zerolog v1.31.0
 	github.com/steadybit/action-kit/go/action_kit_api/v2 v2.7.3
 	github.com/steadybit/discovery-kit/go/discovery_kit_api v1.4.2
 	github.com/steadybit/extension-kit v1.8.8
@@ -41,15 +41,15 @@ require (
 	github.com/go-playground/validator/v10 v10.15.4 // indirect
 	github.com/goccy/go-json v0.10.2 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
-	github.com/gomarkdown/markdown v0.0.0-20230916125811-7478c230c7cd // indirect
+	github.com/gomarkdown/markdown v0.0.0-20230922112808-5421fefb8386 // indirect
 	github.com/gorilla/css v1.0.0 // indirect
 	github.com/invopop/yaml v0.2.0 // indirect
 	github.com/iris-contrib/schema v0.0.6 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/kataras/blocks v0.0.7 // indirect
+	github.com/kataras/blocks v0.0.8 // indirect
 	github.com/kataras/golog v0.1.9 // indirect
-	github.com/kataras/iris/v12 v12.2.6-0.20230908161203-24ba4e8933b9 // indirect
+	github.com/kataras/iris/v12 v12.2.7 // indirect
 	github.com/kataras/pio v0.0.12 // indirect
 	github.com/kataras/sitemap v0.0.6 // indirect
 	github.com/kataras/tunnel v0.0.4 // indirect
