@@ -3,8 +3,9 @@
 ##
 ## Build
 ##
-FROM golang:1.20-alpine AS build
+FROM --platform=$BUILDPLATFORM golang:1.20-alpine AS build
 
+ARG TARGETOS TARGETARCH
 ARG NAME
 ARG VERSION
 ARG REVISION
@@ -18,7 +19,7 @@ RUN go mod download
 
 COPY . .
 
-RUN go build \
+RUN GOOS=$TARGETOS GOARCH=$TARGETARCH go build \
     -ldflags="\
     -X 'github.com/steadybit/extension-kit/extbuild.ExtensionName=${NAME}' \
     -X 'github.com/steadybit/extension-kit/extbuild.Version=${VERSION}' \
@@ -29,7 +30,7 @@ RUN make licenses-report
 ##
 ## Runtime
 ##
-FROM alpine:3.16
+FROM alpine:3.18
 
 LABEL "steadybit.com.discovery-disabled"="true"
 
